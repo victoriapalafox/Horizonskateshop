@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fondo de Imagen en HTML que Cubre Toda la Página</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+</style>
+</head>
+<body>
+    <h3>Nos gustaria que llene este formulario para tener un registro de la gente que visita nuestra pagina</h3>
+    <form id="miFormulario" action="/procesar-formulario" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required><br>
+      
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required><br>
+      
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" placeholder="Ingrese su edad"><br>
+      
+        <input type="submit" value="Enviar">
+      </form>
+      
+      <script>
+      document.getElementById("miFormulario").addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("¡El formulario se ha enviado!");
+      });
+      </script>
+      
+      </body>
+      </html>

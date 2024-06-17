@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios</title>
+  <style>@keyframes ejemplo {
+    from { background-color: red; } to { background-color: violet; }
+    }
+    body {
+    animation-name: ejemplo; animation-duration: 4s; animation-iteration-count: infinite;
+    }
+       
+    </style>
+</body>
+<h3>Productos disponibles</h3>
+<select id="Mercado" onchange="miFuncion()">
+  <option value="opcion">Selecciona el producto:</option>
+  <option value="frutas">Tabla Virtud 7.6</option>
+  <option value="verduras">Tabla Virtud 8.5</option>
+  <option value="carne">Tabla Virtud 8.2</option>
+  <option value="cereales">Baleros Vulkan premium</option>
+  <option value="lija">Pliego de lija</option>
+  <option value="elevadores">Par de elevadores Zenit</option>
+</select>
+</center>
+<div id="texto"></div>
+<script>
+function miFuncion() {
+var x = document.getElementById("Mercado").value;
+if ( x === "frutas") {
+    document.getElementById("texto").innerHTML=`
+        <center>
+        <h2>Tabla Virtud medida 7.6</h2>
+        <h2>Precio:</h2><br>
+        <h3>$600</h3><br>
+        </center>
+    `;
+}
+if ( x === "verduras") {
+    document.getElementById("texto").innerHTML=`
+        <center>
+        <h2>Tabla Virtud medida 8.5</h2>
+        <h2>Precio:</h2><br>
+        <h3>$600 </h3><br>
+        </center>
+    `;
+}
+if ( x === "carne") {
+    document.getElementById("texto").innerHTML=`
+        <center>
+        <h2>Tabla Virtud medida 8.2</h2>
+        <h2>Precio:</h2><br>
+        <h3>$600</h3><br>
+        </center>
+    `;
+}
+if ( x === "cereales") {
+    document.getElementById("texto").innerHTML=`
+        <center>
+        <h2>Set de Balero Vulkan Premium</h2>
+        <h2>Precio:</h2><br>
+        <h3>$300</h3><br>
+        </center>
+    `;
+}
+if ( x === "lija") {
+    document.getElementById("texto").innerHTML=`
+        <center>
+        <h2>Pliego de lija para tu patineta!</h2>
+        <h2>Precio:</h2><br>
+        <h3>$100</h3><br>
+        </center>
+    `;
+}
+if ( x === "elevadores") {
+    document.getElementById("texto").innerHTML=`
+        <center>
+        <h2>Par de elevadores Zenit</h2>
+        <h2>Precio de un kilo</h2><br>
+        <h3>$150</h3><br>
+        </center>
+    `;
+}
+}
+</script>   
+<h4>Aqui puede calcular el total de lo que comprara:</h4>
+<style>
+  .calculator {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  .calculator input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .calculator button {
+    width: 30%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .calculator button:hover {
+    background-color: #f0f0f0;
+  }
+  .calculator button.clear {
+    width: 65%;
+  }
+</style>
+</head>
+<body>
+<div class="calculator">
+  <input type="text" id="display" readonly>
+  <button onclick="addToDisplay('1')">1</button>
+  <button onclick="addToDisplay('2')">2</button>
+  <button onclick="addToDisplay('3')">3</button>
+  <button onclick="addToDisplay('4')">4</button>
+  <button onclick="addToDisplay('5')">5</button>
+  <button onclick="addToDisplay('6')">6</button>
+  <button onclick="addToDisplay('7')">7</button>
+  <button onclick="addToDisplay('8')">8</button>
+  <button onclick="addToDisplay('9')">9</button>
+  <button onclick="addToDisplay('0')">0</button>
+  <button onclick="addToDisplay('+')">+</button>
+  <button onclick="addToDisplay('-')">-</button>
+  <button onclick="calculate()">=</button>
+  <button class="clear" onclick="clearDisplay()">Clear</button>
+</div>
+<script>
+  function addToDisplay(value) {
+    document.getElementById('display').value += value;
+  }
+  function calculate() {
+    var result = eval(document.getElementById('display').value);
+    document.getElementById('display').value = result;
+  }
+  function clearDisplay() {
+    document.getElementById('display').value = '';
+  }
+</script>
+
+</body>
+</html>
+
+    

@@ -1,0 +1,6 @@
+@keyframes ejemplo {
+    from { background-color: red; } to { background-color: violet; }
+    }
+    body {
+    animation-name: ejemplo; animation-duration: 4s; animation-iteration-count: infinite;
+    }
